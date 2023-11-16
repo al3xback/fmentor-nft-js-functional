@@ -20,7 +20,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- Js Procedural
+- Js Functional
 - Mobile-first workflow
 
 ## Author
