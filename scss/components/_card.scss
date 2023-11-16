@@ -1,0 +1,125 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+
+.card,
+.card__image,
+.card__content {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+}
+
+.card {
+	width: 100%;
+	max-width: func.em(350);
+	padding: func.em(24);
+	margin: func.em(40) 0 func.em(60);
+	background-color: var.$color-dark-blue-2;
+	@include mix.border-radius(15px);
+	@include mix.box-shadow(0 func.em(25) func.em(50) rgba(0, 0, 0, 0.1));
+}
+
+.card__image {
+	position: relative;
+	margin-bottom: func.em(24);
+	background-color: var.$color-soft-blue;
+	@include mix.border-radius(0.5em);
+	cursor: pointer;
+}
+
+.card__image::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	background-color: var.$color-cyan-light;
+	background-image: url('../images/icons/view.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	@include mix.border-radius(inherit);
+	@include mix.transition(opacity 0.3s);
+	opacity: 0;
+}
+
+.card__image:hover::before {
+	opacity: 1;
+}
+
+.card__image img {
+	width: 100%;
+	height: auto;
+	@include mix.border-radius(inherit);
+}
+
+.card__title {
+	margin-bottom: func.em(12, 22);
+}
+
+.card__desc {
+	margin-bottom: func.em(16, 18);
+}
+
+.card__stats-list {
+	@include mix.flexbox;
+}
+
+.card__stats-list-item {
+	@include mix.flexbox;
+	@include mix.align-items(center);
+	width: 50%;
+	font-size: func.em(15);
+}
+
+.card__stats-list-item:first-child {
+	font-weight: var.$font-weight-600;
+	color: var.$color-cyan;
+}
+
+.card__stats-list-item:last-child {
+	@include mix.justify-content(flex-end);
+}
+
+.card__stats-list-item i {
+	@include mix.flex(none);
+	margin-right: func.em(7.7);
+}
+
+.card__author {
+	@include mix.flexbox;
+	@include mix.align-items(center);
+	padding-top: func.em(16);
+	margin-top: func.em(16);
+	border-top: 1px solid var.$color-dark-blue-3;
+}
+
+.card__author-img {
+	@include mix.flex(none);
+	width: func.em(33);
+	height: auto;
+	margin-right: func.em(16);
+	border: 1px solid var.$color-white;
+	border-radius: 50%;
+}
+
+.card__author-desc {
+	font-size: func.em(15);
+}
+
+@media (min-width: 48em) {
+	.card__title {
+		margin-bottom: func.em(16, 22);
+	}
+
+	.card__desc {
+		margin-bottom: func.em(24, 18);
+	}
+
+	.card__stats-list-item,
+	.card__author-desc {
+		font-size: func.em(16);
+	}
+
+	.card__author {
+		margin-top: func.em(24);
+	}
+}
