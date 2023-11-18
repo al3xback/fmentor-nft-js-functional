@@ -14,13 +14,12 @@ const createCardEl = () => {
 	/* card image */
 	const cardImageWrapperEl = createElement('div', 'card__image');
 
-	const cardImageEl = createImageElement(
-		'./images/equilibrium.jpg',
-		null,
-		'',
-		302,
-		302
-	);
+	const cardImageEl = createElement('img', null, null, [
+		createElementAttribute('src', './images/equilibrium.jpg'),
+		createElementAttribute('alt', ''),
+		createElementAttribute('width', 302),
+		createElementAttribute('height', 302),
+	]);
 
 	cardImageWrapperEl.appendChild(cardImageEl);
 
@@ -30,10 +29,11 @@ const createCardEl = () => {
 	/* card title */
 	const cardTitleEl = createElement('h2', 'card__title');
 
-	const cardTitleLinkEl = createLinkElement(
-		'#',
+	const cardTitleLinkEl = createElement(
+		'a',
 		'btn btn--link',
-		'Equilibrium #3429'
+		'Equilibrium #3429',
+		[createElementAttribute('href', '#')]
 	);
 
 	cardTitleEl.appendChild(cardTitleLinkEl);
@@ -70,12 +70,16 @@ const createCardEl = () => {
 	/* card author */
 	const cardAuthorEl = createElement('div', 'card__author');
 
-	const cardAuthorImageEl = createImageElement(
-		'./images/avatar.png',
+	const cardAuthorImageEl = createElement(
+		'img',
 		'card__author-img',
-		'Jules Wyvern',
-		33,
-		33
+		null,
+		[
+			createElementAttribute('src', './images/avatar.png'),
+			createElementAttribute('alt', 'Jules Wyvern'),
+			createElementAttribute('width', 33),
+			createElementAttribute('height', 33),
+		]
 	);
 
 	const cardAuthorDescriptionEl = createElement(
@@ -84,10 +88,11 @@ const createCardEl = () => {
 		'Creation of '
 	);
 
-	const cardAuthorDescriptionLinkEl = createLinkElement(
-		'#',
+	const cardAuthorDescriptionLinkEl = createElement(
+		'a',
 		'btn btn--link',
-		'Jules Wyvern'
+		'Jules Wyvern',
+		[createElementAttribute('href', '#')]
 	);
 
 	cardAuthorDescriptionEl.appendChild(cardAuthorDescriptionLinkEl);
@@ -127,20 +132,29 @@ const createFooterEl = () => {
 
 	const footerTextEl = createElement('p', null, 'Challenge by ');
 
-	const footerTextLinkCreatorEl = createLinkElement(
-		'https://www.frontendmentor.io?ref=challenge',
+	const footerTextLinkCreatorEl = createElement(
+		'a',
 		'btn btn--link',
 		'Frontend Mentor',
-		'noopener',
-		'_blank'
+		[
+			createElementAttribute(
+				'href',
+				'https://www.frontendmentor.io?ref=challenge'
+			),
+			createElementAttribute('rel', 'noopener'),
+			createElementAttribute('target', '_blank'),
+		]
 	);
 
-	const footerTextLinkCoderEl = createLinkElement(
-		'https://github.com/al3xback',
+	const footerTextLinkCoderEl = createElement(
+		'a',
 		'btn btn--link',
 		'al3xback',
-		'noopener',
-		'_blank'
+		[
+			createElementAttribute('href', 'https://github.com/al3xback'),
+			createElementAttribute('rel', 'noopener'),
+			createElementAttribute('target', '_blank'),
+		]
 	);
 
 	footerTextEl.appendChild(footerTextLinkCreatorEl);
