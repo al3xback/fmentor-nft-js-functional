@@ -23,7 +23,7 @@
 	position: relative;
 	margin-bottom: func.em(24);
 	background-color: var.$color-soft-blue;
-	@include mix.border-radius(0.5em);
+	@include mix.border-radius(8px);
 	cursor: pointer;
 }
 
