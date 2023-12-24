@@ -13,16 +13,16 @@
 	width: 100%;
 	max-width: func.em(350);
 	padding: func.em(24);
-	margin: func.em(40) 0 func.em(60);
 	background-color: var.$color-dark-blue-2;
+	margin: func.em(40) 0 func.em(60);
 	@include mix.border-radius(15px);
 	@include mix.box-shadow(0 func.em(25) func.em(50) rgba(0, 0, 0, 0.1));
 }
 
 .card__image {
 	position: relative;
-	margin-bottom: func.em(24);
 	background-color: var.$color-soft-blue;
+	margin-bottom: func.em(24);
 	@include mix.border-radius(8px);
 	cursor: pointer;
 }
@@ -31,7 +31,6 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	margin: auto;
 	background-color: var.$color-cyan-light;
 	background-image: url('../images/icons/view.svg');
 	background-repeat: no-repeat;
