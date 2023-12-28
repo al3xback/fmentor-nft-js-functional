@@ -1,14 +1,13 @@
 @use '../abstracts/variables' as var;
-@use '../abstracts/mixins' as mix;
 
 .btn {
-	@include mix.inline-flexbox;
+	display: inline-flex;
 	text-decoration: none;
 }
 
 .btn--link {
 	color: var.$color-white;
-	@include mix.transition(color 0.15s ease-in-out);
+	transition: color 0.15s ease-in-out;
 }
 
 .btn--link:hover {

@@ -70,17 +70,12 @@ const createCardEl = () => {
 	/* card author */
 	const cardAuthorEl = createElement('div', 'card__author');
 
-	const cardAuthorImageEl = createElement(
-		'img',
-		'card__author-img',
-		null,
-		[
-			createElementAttribute('src', './images/avatar.png'),
-			createElementAttribute('alt', 'Jules Wyvern'),
-			createElementAttribute('width', 33),
-			createElementAttribute('height', 33),
-		]
-	);
+	const cardAuthorImageEl = createElement('img', 'card__author-img', null, [
+		createElementAttribute('src', './images/avatar.png'),
+		createElementAttribute('alt', 'Jules Wyvern'),
+		createElementAttribute('width', 33),
+		createElementAttribute('height', 33),
+	]);
 
 	const cardAuthorDescriptionEl = createElement(
 		'span',
