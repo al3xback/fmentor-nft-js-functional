@@ -20,9 +20,9 @@ const createCardEl = () => {
 
 	const cardImageEl = createElement('img', null, null, [
 		createElementAttribute('src', './images/equilibrium.jpg'),
-		createElementAttribute('alt', 'Equilibrium'),
 		createElementAttribute('width', 302),
 		createElementAttribute('height', 302),
+		createElementAttribute('alt', 'Equilibrium'),
 	]);
 
 	cardImageWrapperEl.appendChild(cardImageEl);
@@ -76,9 +76,9 @@ const createCardEl = () => {
 
 	const cardAuthorImageEl = createElement('img', 'card__author-img', null, [
 		createElementAttribute('src', './images/avatar.png'),
-		createElementAttribute('alt', 'Jules Wyvern'),
 		createElementAttribute('width', 33),
 		createElementAttribute('height', 33),
+		createElementAttribute('alt', 'Jules Wyvern'),
 	]);
 
 	const cardAuthorDescriptionEl = createElement(
